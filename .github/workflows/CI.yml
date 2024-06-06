@@ -24,6 +24,6 @@ jobs:
     uses: actions/upload-artifact@v4
     with:
        name: linux_artifacts
-       path: _build/formatter_lib_app-*
+       path: build
 
  

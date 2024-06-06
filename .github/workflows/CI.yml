@@ -20,8 +20,8 @@ jobs:
   - name: Build Solver
     run: cmake --build ${{github.workspace}}/build
 
-  - name: Create Artifact
-    run: |
-      mkdir ${{github.workspace}}/artifacts
-      cp ${{github.workspace}}/build/solver ${{github.workspace}}/artifacts/solver
-      echo "Artifact created at ${{github.workspace}}/artifacts/solver"
+  - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: chat_room
+        path: build
